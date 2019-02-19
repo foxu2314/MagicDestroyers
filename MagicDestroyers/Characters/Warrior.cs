@@ -9,11 +9,13 @@ namespace MagicDestroyers.Characters
         private int abilityPoints;
         private int healthPoints;
         private int level;
+
         private string faction;
         private string name;
 
         private ChainLink bodyArmor;
         private Axe weapon;
+
 
         public int AbilityPoints
         {
@@ -74,11 +76,89 @@ namespace MagicDestroyers.Characters
 
         }
 
-        public Warrior()
+        public string Faction
         {
-
+            get
+            {
+                return this.faction;
+            }
+            set
+            {
+                if (value == "Meele" || faction == "Spellcasters")
+                {
+                this.faction = value;
+                }
+                else
+                {
+                    throw new ArgumentOutOfRangeException(string.Empty, "Innapropriate faction, please choose either Meele or Spellcaster!");
+                }
+            }
         }
 
+        public string Name
+        {
+            get
+            {
+                return this.name;
+            }
+            set
+            {
+                if (value.Length >= 3 && value.Length <= 12)
+                {
+                    this.name = value;
+                }
+                else
+                {
+                    throw new ArgumentOutOfRangeException(string.Empty, "Innapropriate length of your name, it has to be between 3 and 12 characters!");
+                }
+            }
+        }
+
+        public ChainLink BodyArmor
+        {
+            get
+            {
+                return this.bodyArmor;
+            }
+            set
+            {
+                this.bodyArmor = value;
+            }
+        }
+
+        public Axe Weapon
+        {
+            get
+            {
+                return this.weapon;
+            }
+            set
+            {
+                this.weapon = value;
+            }
+        }
+
+
+        public Warrior()
+            :this("Warrior", 10)
+        {
+        }
+        public Warrior(string name, int level)
+            : this(name, level, 100)
+        {
+        }
+        public Warrior(string name, int level, int healthPoints)
+        {
+            this.Name = name;
+            this.Level = level;
+            this.HealthPoints = healthPoints;
+            this.Faction = "Meele";
+            this.AbilityPoints = 100;
+            this.Weapon = new Axe();
+            this.BodyArmor = new ChainLink();
+        }
+
+        
 
         public void Strike()
         {

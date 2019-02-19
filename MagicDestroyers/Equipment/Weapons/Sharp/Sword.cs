@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MagicDestroyers.Equipment.Weapons.Sharp
 {
-    class Sword
+    public class Sword
     {
         private int damage;
 
