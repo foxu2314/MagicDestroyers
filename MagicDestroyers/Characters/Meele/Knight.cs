@@ -125,7 +125,7 @@ namespace MagicDestroyers.Characters
             }
         }
 
-        public Axe Weapon
+        public Hammer Weapon
         {
             get
             {
@@ -138,22 +138,22 @@ namespace MagicDestroyers.Characters
         }
 
 
-        public Warrior()
-            : this("Warrior", 10)
+        public Knight()
+            : this("Knight", 40)
         {
         }
-        public Warrior(string name, int level)
-            : this(name, level, 100)
+        public Knight(string name, int level)
+            : this(name, level, 400)
         {
         }
-        public Warrior(string name, int level, int healthPoints)
+        public Knight(string name, int level, int healthPoints)
         {
             this.Name = name;
             this.Level = level;
             this.HealthPoints = healthPoints;
             this.Faction = "Meele";
-            this.AbilityPoints = 100;
-            this.Weapon = new Axe();
+            this.AbilityPoints = 400;
+            this.Weapon = new Hammer();
             this.BodyArmor = new ChainLink();
         }
 

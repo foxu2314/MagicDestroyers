@@ -43,12 +43,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Characters\Assassin.cs" />
-    <Compile Include="Characters\Druid.cs" />
-    <Compile Include="Characters\Knight.cs" />
-    <Compile Include="Characters\Mage.cs" />
-    <Compile Include="Characters\Necromancer.cs" />
-    <Compile Include="Characters\Warrior.cs" />
+    <Compile Include="Characters\Meele\Assassin.cs" />
+    <Compile Include="Characters\Spellcaster\Druid.cs" />
+    <Compile Include="Characters\Meele\Knight.cs" />
+    <Compile Include="Characters\Spellcaster\Mage.cs" />
+    <Compile Include="Characters\Spellcaster\Necromancer.cs" />
+    <Compile Include="Characters\Meele\Warrior.cs" />
     <Compile Include="Equipment\Armors\Heavy\ChainLink.cs" />
     <Compile Include="Equipment\Armors\Leather\LightLeatherVest.cs" />
     <Compile Include="Equipment\Armors\Light\ClothRobe.cs" />

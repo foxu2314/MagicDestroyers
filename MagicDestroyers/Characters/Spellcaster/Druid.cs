@@ -1,19 +1,20 @@
 ﻿using MagicDestroyers.Equipment.Armors.Leather;
-using MagicDestroyers.Equipment.Weapons.Sharp;
+using MagicDestroyers.Equipment.Weapons.Blant;
 using System;
 
 namespace MagicDestroyers.Characters
 {
-    public class Assassin
+    public class Druid
     {
         private int abilityPoints;
         private int healthPoints;
         private int level;
+
         private string faction;
         private string name;
 
         private LightLeatherVest bodyArmor;
-        private Sword weapon;
+        private Staff weapon;
 
 
         public int AbilityPoints
@@ -113,7 +114,7 @@ namespace MagicDestroyers.Characters
             }
         }
 
-        public ChainLink BodyArmor
+        public LightLeatherVest BodyArmor
         {
             get
             {
@@ -125,7 +126,7 @@ namespace MagicDestroyers.Characters
             }
         }
 
-        public Axe Weapon
+        public Staff Weapon
         {
             get
             {
@@ -138,37 +139,37 @@ namespace MagicDestroyers.Characters
         }
 
 
-        public Warrior()
-            : this("Warrior", 10)
+        public Druid()
+            : this("Druid", 50)
         {
         }
-        public Warrior(string name, int level)
-            : this(name, level, 100)
+        public Druid(string name, int level)
+            : this(name, level, 500)
         {
         }
-        public Warrior(string name, int level, int healthPoints)
+        public Druid(string name, int level, int healthPoints)
         {
             this.Name = name;
             this.Level = level;
             this.HealthPoints = healthPoints;
-            this.Faction = "Meele";
-            this.AbilityPoints = 100;
-            this.Weapon = new Axe();
-            this.BodyArmor = new ChainLink();
+            this.Faction = "Spellcaster";
+            this.AbilityPoints = 500;
+            this.Weapon = new Staff();
+            this.BodyArmor = new LightLeatherVest();
         }
 
 
-        public void Raze()
+        public void Moonfire()
         {
             throw new NotImplementedException();
         }
 
-        public void BleedToDeath()
+        public void Starbust()
         {
             throw new NotImplementedException();
         }
 
-        public void Survival()
+        public void OneWithTheNature()
         {
             throw new NotImplementedException();
         }
