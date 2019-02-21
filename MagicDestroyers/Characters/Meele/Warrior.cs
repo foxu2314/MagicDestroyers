@@ -157,7 +157,7 @@ namespace MagicDestroyers.Characters
             this.Weapon = new Axe();
             this.BodyArmor = new ChainLink();
         }
-
+        //
         
 
         public void Strike()
