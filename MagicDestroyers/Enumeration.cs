@@ -4,14 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MagicDestroyers.Characters
+namespace MagicDestroyers
 {
-    class Program
+    public enum Faction
     {
-        static void Main(string[] args)
-        {
-
-        }
-
+        Default,
+        Meele,
+        Spellcaster
     }
 }

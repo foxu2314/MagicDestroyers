@@ -16,4 +16,4 @@ namespace MagicDestroyers.Equipment.Armors.Light
         }
     }
 }
-}
+

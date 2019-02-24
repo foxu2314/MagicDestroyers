@@ -6,12 +6,17 @@ namespace MagicDestroyers.Characters
 {
     public class Warrior
     {
+        public const int DEFAULT_ABILITYPOINTS = 10;
+        public const int DEFAULT_HEALTHPOINTS = 100;
+        public const int DEFAULT_LEVEL = 10;
+        private const string DEFAULT_NAME = "Warrior";
+
         private int abilityPoints;
         private int healthPoints;
         private int level;
-
-        private string faction;
         private string name;
+
+        private Faction faction;
 
         private ChainLink bodyArmor;
         private Axe weapon;
@@ -45,7 +50,7 @@ namespace MagicDestroyers.Characters
             }
             set
             {
-                if (value >= 0 && value <= 10)
+                if (value >= 0 && value <= 100)
                 {
                     healthPoints = value;
                 }
@@ -76,22 +81,15 @@ namespace MagicDestroyers.Characters
 
         }
 
-        public string Faction
+        public Faction Faction
         {
             get
             {
-                return this.faction;
+                return faction;
             }
             set
             {
-                if (value == "Meele" || faction == "Spellcasters")
-                {
                 this.faction = value;
-                }
-                else
-                {
-                    throw new ArgumentOutOfRangeException(string.Empty, "Innapropriate faction, please choose either Meele or Spellcaster!");
-                }
             }
         }
 
@@ -140,24 +138,23 @@ namespace MagicDestroyers.Characters
 
 
         public Warrior()
-            :this("Warrior", 10)
+            :this(DEFAULT_NAME, DEFAULT_LEVEL)
         {
         }
         public Warrior(string name, int level)
-            : this(name, level, 100)
+            : this(DEFAULT_NAME, DEFAULT_LEVEL, DEFAULT_HEALTHPOINTS, Faction.Default)
         {
         }
-        public Warrior(string name, int level, int healthPoints)
+        public Warrior(string name, int level, int healthPoints, Faction faction)
         {
             this.Name = name;
             this.Level = level;
             this.HealthPoints = healthPoints;
-            this.Faction = "Meele";
-            this.AbilityPoints = 100;
+            this.AbilityPoints = DEFAULT_ABILITYPOINTS;
             this.Weapon = new Axe();
             this.BodyArmor = new ChainLink();
+            this.Faction = faction;
         }
-        //
         
 
         public void Strike()

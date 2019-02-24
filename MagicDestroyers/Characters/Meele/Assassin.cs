@@ -174,4 +174,4 @@ namespace MagicDestroyers.Characters
         }
     }
 }
-}
+

@@ -49,6 +49,7 @@
     <Compile Include="Characters\Spellcaster\Mage.cs" />
     <Compile Include="Characters\Spellcaster\Necromancer.cs" />
     <Compile Include="Characters\Meele\Warrior.cs" />
+    <Compile Include="Enumeration.cs" />
     <Compile Include="Equipment\Armors\Heavy\ChainLink.cs" />
     <Compile Include="Equipment\Armors\Leather\LightLeatherVest.cs" />
     <Compile Include="Equipment\Armors\Light\ClothRobe.cs" />
