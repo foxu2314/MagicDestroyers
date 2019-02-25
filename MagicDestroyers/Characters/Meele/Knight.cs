@@ -10,7 +10,7 @@ namespace MagicDestroyers.Characters
         public const int DEFAULT_HEALTHPOINTS = 200;
         public const int DEFAULT_LEVEL = 25;
         private const string DEFAULT_NAME = "Joe";
-        private const string DEFAULT_FACTION = "Meele";
+        private const Faction DEFAULT_FACTION = Faction.Meele;
 
         private readonly ChainLink DEFAULT_BODY_ARMOR = new ChainLink();
         private readonly Hammer DEFAULT_WEAPON = new Hammer();
@@ -18,7 +18,7 @@ namespace MagicDestroyers.Characters
         private int abilityPoints;
         private int healthPoints;
         private int level;
-        private string faction;
+        private Faction faction;
         private string name;
 
         private ChainLink bodyArmor;
@@ -84,7 +84,7 @@ namespace MagicDestroyers.Characters
 
         }
 
-        public string Faction
+        public Faction Faction
         {
             get
             {
@@ -92,14 +92,7 @@ namespace MagicDestroyers.Characters
             }
             set
             {
-                if (value == "Meele" || faction == "Spellcasters")
-                {
-                    this.faction = value;
-                }
-                else
-                {
-                    throw new ArgumentOutOfRangeException(string.Empty, "Innapropriate faction, please choose either Meele or Spellcaster!");
-                }
+                this.faction = value;
             }
         }
 

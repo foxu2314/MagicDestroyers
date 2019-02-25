@@ -10,7 +10,7 @@ namespace MagicDestroyers.Characters
         public const int DEFAULT_HEALTHPOINTS = 100;
         public const int DEFAULT_LEVEL = 15;
         private const string DEFAULT_NAME = "Bob";
-        private const string DEFAULT_FACTION = "Meele";
+        private const Faction DEFAULT_FACTION = Faction.Meele;
 
         private readonly ChainLink DEFAULT_BODY_ARMOR = new ChainLink();
         private readonly Axe DEFAULT_WEAPON = new Axe();
@@ -20,7 +20,7 @@ namespace MagicDestroyers.Characters
         private int level;
         private string name;
 
-        private string faction;
+        private Faction faction;
 
         private ChainLink bodyArmor;
         private Axe weapon;
@@ -85,7 +85,7 @@ namespace MagicDestroyers.Characters
 
         }
 
-        public string Faction
+        public Faction Faction
         {
             get
             {

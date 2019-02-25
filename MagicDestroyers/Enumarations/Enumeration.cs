@@ -8,7 +8,6 @@ namespace MagicDestroyers
 {
     public enum Faction
     {
-        Default,
         Meele,
         Spellcaster
     }

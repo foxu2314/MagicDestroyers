@@ -10,7 +10,7 @@ namespace MagicDestroyers.Characters
         public const int DEFAULT_HEALTHPOINTS = 600;
         public const int DEFAULT_LEVEL = 65;
         private const string DEFAULT_NAME = "Adrian";
-        private const string DEFAULT_FACTION = "Spellcaster";
+        private const Faction DEFAULT_FACTION = Faction.Meele;
 
         private readonly LightLeatherVest DEFAULT_BODY_ARMOR = new LightLeatherVest();
         private readonly Staff DEFAULT_WEAPON = new Staff();
@@ -19,7 +19,7 @@ namespace MagicDestroyers.Characters
         private int healthPoints;
         private int level;
 
-        private string faction;
+        private Faction faction;
         private string name;
 
         private LightLeatherVest bodyArmor;
@@ -85,7 +85,7 @@ namespace MagicDestroyers.Characters
 
         }
 
-        public string Faction
+        public Faction Faction
         {
             get
             {
@@ -93,14 +93,7 @@ namespace MagicDestroyers.Characters
             }
             set
             {
-                if (value == "Meele" || faction == "Spellcasters")
-                {
-                    this.faction = value;
-                }
-                else
-                {
-                    throw new ArgumentOutOfRangeException(string.Empty, "Innapropriate faction, please choose either Meele or Spellcaster!");
-                }
+                this.faction = value;
             }
         }
 
@@ -161,7 +154,7 @@ namespace MagicDestroyers.Characters
             this.Name = name;
             this.Level = level;
             this.HealthPoints = healthPoints;
-            this.Faction = "Spellcaster";
+            this.Faction = DEFAULT_FACTION;
             this.AbilityPoints = 500;
             this.Weapon = new Staff();
             this.BodyArmor = new LightLeatherVest();
