@@ -6,6 +6,15 @@ namespace MagicDestroyers.Characters
 {
     public class Druid
     {
+        public const int DEFAULT_ABILITYPOINTS = 60;
+        public const int DEFAULT_HEALTHPOINTS = 600;
+        public const int DEFAULT_LEVEL = 65;
+        private const string DEFAULT_NAME = "Adrian";
+        private const string DEFAULT_FACTION = "Spellcaster";
+
+        private readonly LightLeatherVest DEFAULT_BODY_ARMOR = new LightLeatherVest();
+        private readonly Staff DEFAULT_WEAPON = new Staff();
+
         private int abilityPoints;
         private int healthPoints;
         private int level;

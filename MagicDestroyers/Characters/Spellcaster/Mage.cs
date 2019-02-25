@@ -6,6 +6,15 @@ namespace MagicDestroyers.Characters
 {
     public class Mage
     {
+        public const int DEFAULT_ABILITYPOINTS = 50;
+        public const int DEFAULT_HEALTHPOINTS = 500;
+        public const int DEFAULT_LEVEL = 55;
+        private const string DEFAULT_NAME = "Joana";
+        private const string DEFAULT_FACTION = "Spellcaster";
+
+        private readonly ClothRobe DEFAULT_BODY_ARMOR = new ClothRobe();
+        private readonly Staff DEFAULT_WEAPON = new Staff();
+
         private int abilityPoints;
         private int healthPoints;
         private int level;
@@ -152,10 +161,10 @@ namespace MagicDestroyers.Characters
             this.Name = name;
             this.Level = level;
             this.HealthPoints = healthPoints;
-            this.Faction = "Spellcaster";
-            this.AbilityPoints = 300;
-            this.Weapon = new Staff();
-            this.BodyArmor = new ClothRobe();
+            this.Faction = DEFAULT_FACTION;
+            this.AbilityPoints = DEFAULT_ABILITYPOINTS;
+            this.Weapon = DEFAULT_WEAPON;
+            this.BodyArmor = DEFAULT_BODY_ARMOR;
         }
 
 

@@ -8,15 +8,19 @@ namespace MagicDestroyers.Characters
     {
         public const int DEFAULT_ABILITYPOINTS = 10;
         public const int DEFAULT_HEALTHPOINTS = 100;
-        public const int DEFAULT_LEVEL = 10;
-        private const string DEFAULT_NAME = "Warrior";
+        public const int DEFAULT_LEVEL = 15;
+        private const string DEFAULT_NAME = "Bob";
+        private const string DEFAULT_FACTION = "Meele";
+
+        private readonly ChainLink DEFAULT_BODY_ARMOR = new ChainLink();
+        private readonly Axe DEFAULT_WEAPON = new Axe();
 
         private int abilityPoints;
         private int healthPoints;
         private int level;
         private string name;
 
-        private Faction faction;
+        private string faction;
 
         private ChainLink bodyArmor;
         private Axe weapon;
@@ -52,7 +56,7 @@ namespace MagicDestroyers.Characters
             {
                 if (value >= 0 && value <= 100)
                 {
-                    healthPoints = value;
+                    this.healthPoints = value;
                 }
                 else
                 {
@@ -71,7 +75,7 @@ namespace MagicDestroyers.Characters
             {
                 if (value > 0 && value < 20)
                 {
-                    healthPoints = value;
+                    this.level = value;
                 }
                 else
                 {
@@ -81,7 +85,7 @@ namespace MagicDestroyers.Characters
 
         }
 
-        public Faction Faction
+        public string Faction
         {
             get
             {
@@ -142,18 +146,18 @@ namespace MagicDestroyers.Characters
         {
         }
         public Warrior(string name, int level)
-            : this(DEFAULT_NAME, DEFAULT_LEVEL, DEFAULT_HEALTHPOINTS, Faction.Default)
+            : this(name, level, DEFAULT_HEALTHPOINTS)
         {
         }
-        public Warrior(string name, int level, int healthPoints, Faction faction)
+        public Warrior(string name, int level, int healthPoints)
         {
             this.Name = name;
             this.Level = level;
             this.HealthPoints = healthPoints;
             this.AbilityPoints = DEFAULT_ABILITYPOINTS;
-            this.Weapon = new Axe();
-            this.BodyArmor = new ChainLink();
-            this.Faction = faction;
+            this.Faction = DEFAULT_FACTION;
+            this.Weapon = DEFAULT_WEAPON;
+            this.BodyArmor = DEFAULT_BODY_ARMOR;
         }
         
 

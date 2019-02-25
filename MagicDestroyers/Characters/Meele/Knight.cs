@@ -6,6 +6,15 @@ namespace MagicDestroyers.Characters
 {
     public class Knight
     {
+        public const int DEFAULT_ABILITYPOINTS = 20;
+        public const int DEFAULT_HEALTHPOINTS = 200;
+        public const int DEFAULT_LEVEL = 25;
+        private const string DEFAULT_NAME = "Joe";
+        private const string DEFAULT_FACTION = "Meele";
+
+        private readonly ChainLink DEFAULT_BODY_ARMOR = new ChainLink();
+        private readonly Hammer DEFAULT_WEAPON = new Hammer();
+
         private int abilityPoints;
         private int healthPoints;
         private int level;
@@ -151,10 +160,10 @@ namespace MagicDestroyers.Characters
             this.Name = name;
             this.Level = level;
             this.HealthPoints = healthPoints;
-            this.Faction = "Meele";
-            this.AbilityPoints = 400;
-            this.Weapon = new Hammer();
-            this.BodyArmor = new ChainLink();
+            this.Faction = DEFAULT_FACTION;
+            this.AbilityPoints = DEFAULT_ABILITYPOINTS;
+            this.Weapon = DEFAULT_WEAPON;
+            this.BodyArmor = DEFAULT_BODY_ARMOR;
         }
 
 

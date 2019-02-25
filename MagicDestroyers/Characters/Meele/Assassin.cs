@@ -6,6 +6,15 @@ namespace MagicDestroyers.Characters
 {
     public class Assassin
     {
+        public const int DEFAULT_ABILITYPOINTS = 30;
+        public const int DEFAULT_HEALTHPOINTS = 300;
+        public const int DEFAULT_LEVEL = 35;
+        private const string DEFAULT_NAME = "Steve";
+        private const string DEFAULT_FACTION = "Meele";
+
+        private readonly LightLeatherVest DEFAULT_BODY_ARMOR = new LightLeatherVest();
+        private readonly Sword DEFAULT_WEAPON = new Sword();
+
         private int abilityPoints;
         private int healthPoints;
         private int level;
@@ -151,10 +160,10 @@ namespace MagicDestroyers.Characters
             this.Name = name;
             this.Level = level;
             this.HealthPoints = healthPoints;
-            this.Faction = "Meele";
-            this.AbilityPoints = 600;
-            this.Weapon = new Sword();
-            this.BodyArmor = new LightLeatherVest();
+            this.Faction = DEFAULT_FACTION;
+            this.AbilityPoints = DEFAULT_ABILITYPOINTS;
+            this.Weapon = DEFAULT_WEAPON;
+            this.BodyArmor = DEFAULT_BODY_ARMOR;
         }
 
 

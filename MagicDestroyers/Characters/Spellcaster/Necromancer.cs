@@ -6,6 +6,15 @@ namespace MagicDestroyers.Characters
 {
     public class Necromancer
     {
+        public const int DEFAULT_ABILITYPOINTS = 40;
+        public const int DEFAULT_HEALTHPOINTS = 400;
+        public const int DEFAULT_LEVEL = 45;
+        private const string DEFAULT_NAME = "Donn";
+        private const string DEFAULT_FACTION = "Spellcaster";
+
+        private readonly LightLeatherVest DEFAULT_BODY_ARMOR = new LightLeatherVest();
+        private readonly Sword DEFAULT_WEAPON = new Sword();
+
         private int abilityPoints;
         private int healthPoints;
         private int level;
@@ -152,10 +161,10 @@ namespace MagicDestroyers.Characters
             this.Name = name;
             this.Level = level;
             this.HealthPoints = healthPoints;
-            this.Faction = "Spellcaster";
-            this.AbilityPoints = 200;
-            this.Weapon = new Sword();
-            this.BodyArmor = new LightLeatherVest();
+            this.Faction = DEFAULT_FACTION;
+            this.AbilityPoints = DEFAULT_ABILITYPOINTS;
+            this.Weapon = DEFAULT_WEAPON;
+            this.BodyArmor = DEFAULT_BODY_ARMOR;
         }
 
 
