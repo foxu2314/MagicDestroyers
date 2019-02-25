@@ -6,13 +6,18 @@ using System.Threading.Tasks;
 
 namespace MagicDestroyers.Equipment.Weapons.Sharp
 {
-    public class Sword
+    public class Sword : Sharp
     {
-        private int damage;
+        private const int DEFAULT_DAMAGE_POINTS = 10;
 
         public Sword()
+            : this(DEFAULT_DAMAGE_POINTS)
         {
+        }
 
+        public Sword(int damagePoints)
+        {
+            base.DamagePoints = damagePoints;
         }
 
         public void Bloodthirst()

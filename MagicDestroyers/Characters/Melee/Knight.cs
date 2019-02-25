@@ -1,19 +1,19 @@
-﻿using MagicDestroyers.Equipment.Armors.Leather;
-using MagicDestroyers.Equipment.Weapons.Sharp;
+﻿using MagicDestroyers.Equipment.Armors.Heavy;
+using MagicDestroyers.Equipment.Weapons.Blant;
 using System;
 
-namespace MagicDestroyers.Characters.Spellcasters
+namespace MagicDestroyers.Characters.Melee
 {
-    public class Necromancer : Spellcaster
+    public class Knight : Melee
     {
-        public const int DEFAULT_MANAPOINTS = 40;
-        public const int DEFAULT_HEALTHPOINTS = 400;
-        public const int DEFAULT_LEVEL = 45;
-        private const string DEFAULT_NAME = "Donn";
+        public const int DEFAULT_ABILITYPOINTS = 20;
+        public const int DEFAULT_HEALTHPOINTS = 200;
+        public const int DEFAULT_LEVEL = 25;
+        private const string DEFAULT_NAME = "Joe";
         private const Faction DEFAULT_FACTION = Faction.Meele;
 
-        private readonly LightLeatherVest DEFAULT_BODY_ARMOR = new LightLeatherVest();
-        private readonly Sword DEFAULT_WEAPON = new Sword();
+        private readonly ChainLink DEFAULT_BODY_ARMOR = new ChainLink();
+        private readonly Hammer DEFAULT_WEAPON = new Hammer();
 
         public override int HealthPoints
         {
@@ -23,20 +23,20 @@ namespace MagicDestroyers.Characters.Spellcasters
             }
             set
             {
-                if (value >= 0 && value <= 140)
+                if (value >= 0 && value <= 120)
                 {
                     this.HealthPoints = value;
                 }
                 else
                 {
-                    throw new ArgumentOutOfRangeException(string.Empty, "Improper value, the Health Points should be >=0 and <= 140.");
+                    throw new ArgumentOutOfRangeException(string.Empty, "Improper value, the Health Points should be >=0 and <= 120.");
                 }
             }
         }
-        private LightLeatherVest bodyArmor;
-        private Sword weapon;
+        private ChainLink bodyArmor;
+        private Hammer weapon;
 
-        public LightLeatherVest BodyArmor
+        public ChainLink BodyArmor
         {
             get
             {
@@ -47,7 +47,7 @@ namespace MagicDestroyers.Characters.Spellcasters
                 this.bodyArmor = value;
             }
         }
-        public Sword Weapon
+        public Hammer Weapon
         {
             get
             {
@@ -59,34 +59,34 @@ namespace MagicDestroyers.Characters.Spellcasters
             }
         }
 
-        public Necromancer()
-            : this("Necromancer", 20)
+        public Knight()
+            : this("Knight", 40)
         {
         }
-        public Necromancer(string name, int level)
-            : this(name, level, 200)
+        public Knight(string name, int level)
+            : this(name, level, 400)
         {
         }
-        public Necromancer(string name, int level, int healthPoints)
+        public Knight(string name, int level, int healthPoints)
         {
             this.Name = name;
             this.Level = level;
             this.HealthPoints = healthPoints;
             this.Faction = DEFAULT_FACTION;
-            this.ManaPoints = DEFAULT_MANAPOINTS;
+            this.AbilityPoints = DEFAULT_ABILITYPOINTS;
             this.Weapon = DEFAULT_WEAPON;
             this.BodyArmor = DEFAULT_BODY_ARMOR;
         }
 
-        public void ShadowRage()
+        public void HolySoul()
         {
             throw new NotImplementedException();
         }
-        public void VampireTouch()
+        public void PurifySoul()
         {
             throw new NotImplementedException();
         }
-        public void BoneShield()
+        public void RighteousWings()
         {
             throw new NotImplementedException();
         }

@@ -2,14 +2,14 @@
 using MagicDestroyers.Equipment.Weapons.Sharp;
 using System;
 
-namespace MagicDestroyers.Characters.Spellcasters
+namespace MagicDestroyers.Characters.Melee
 {
-    public class Necromancer : Spellcaster
+    public class Assassin : Melee
     {
-        public const int DEFAULT_MANAPOINTS = 40;
-        public const int DEFAULT_HEALTHPOINTS = 400;
-        public const int DEFAULT_LEVEL = 45;
-        private const string DEFAULT_NAME = "Donn";
+        public const int DEFAULT_ABILITYPOINTS = 30;
+        public const int DEFAULT_HEALTHPOINTS = 300;
+        public const int DEFAULT_LEVEL = 35;
+        private const string DEFAULT_NAME = "Steve";
         private const Faction DEFAULT_FACTION = Faction.Meele;
 
         private readonly LightLeatherVest DEFAULT_BODY_ARMOR = new LightLeatherVest();
@@ -23,13 +23,13 @@ namespace MagicDestroyers.Characters.Spellcasters
             }
             set
             {
-                if (value >= 0 && value <= 140)
+                if (value >= 0 && value <= 130)
                 {
                     this.HealthPoints = value;
                 }
                 else
                 {
-                    throw new ArgumentOutOfRangeException(string.Empty, "Improper value, the Health Points should be >=0 and <= 140.");
+                    throw new ArgumentOutOfRangeException(string.Empty, "Improper value, the Health Points should be >=0 and <= 130.");
                 }
             }
         }
@@ -59,34 +59,34 @@ namespace MagicDestroyers.Characters.Spellcasters
             }
         }
 
-        public Necromancer()
-            : this("Necromancer", 20)
+        public Assassin()
+            : this("Assassin", 60)
         {
         }
-        public Necromancer(string name, int level)
-            : this(name, level, 200)
+        public Assassin(string name, int level)
+            : this(name, level, 600)
         {
         }
-        public Necromancer(string name, int level, int healthPoints)
+        public Assassin(string name, int level, int healthPoints)
         {
             this.Name = name;
             this.Level = level;
             this.HealthPoints = healthPoints;
             this.Faction = DEFAULT_FACTION;
-            this.ManaPoints = DEFAULT_MANAPOINTS;
+            this.AbilityPoints = DEFAULT_ABILITYPOINTS;
             this.Weapon = DEFAULT_WEAPON;
             this.BodyArmor = DEFAULT_BODY_ARMOR;
         }
 
-        public void ShadowRage()
+        public void Raze()
         {
             throw new NotImplementedException();
         }
-        public void VampireTouch()
+        public void BleedToDeath()
         {
             throw new NotImplementedException();
         }
-        public void BoneShield()
+        public void Survival()
         {
             throw new NotImplementedException();
         }

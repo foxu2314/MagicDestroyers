@@ -6,13 +6,18 @@ using System.Threading.Tasks;
 
 namespace MagicDestroyers.Equipment.Weapons.Blant
 {
-    public class Staff
+    public class Staff : Blant
     {
-        private int damage;
+        private const int DEFAULT_DAMAGE_POINTS = 10;
 
         public Staff()
+            : this(DEFAULT_DAMAGE_POINTS)
         {
+        }
 
+        public Staff(int damagePoints)
+        {
+            base.DamagePoints = damagePoints;
         }
 
         public void Empower()

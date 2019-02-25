@@ -43,20 +43,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Characters\Meele\Assassin.cs" />
+    <Compile Include="Characters\Character.cs" />
+    <Compile Include="Characters\Melee\Assassin.cs" />
+    <Compile Include="Characters\Melee\Melee.cs" />
     <Compile Include="Characters\Spellcaster\Druid.cs" />
-    <Compile Include="Characters\Meele\Knight.cs" />
+    <Compile Include="Characters\Melee\Knight.cs" />
     <Compile Include="Characters\Spellcaster\Mage.cs" />
     <Compile Include="Characters\Spellcaster\Necromancer.cs" />
-    <Compile Include="Characters\Meele\Warrior.cs" />
+    <Compile Include="Characters\Melee\Warrior.cs" />
+    <Compile Include="Characters\Spellcaster\Spellcaster.cs" />
     <Compile Include="Enumarations\Enumeration.cs" />
+    <Compile Include="Equipment\Armors\Armor.cs" />
     <Compile Include="Equipment\Armors\Heavy\ChainLink.cs" />
+    <Compile Include="Equipment\Armors\Heavy\Heavy.cs" />
+    <Compile Include="Equipment\Armors\Leather\Leather.cs" />
     <Compile Include="Equipment\Armors\Leather\LightLeatherVest.cs" />
     <Compile Include="Equipment\Armors\Light\ClothRobe.cs" />
+    <Compile Include="Equipment\Armors\Light\Light.cs" />
+    <Compile Include="Equipment\Weapons\Blant\Blant.cs" />
     <Compile Include="Equipment\Weapons\Blant\Hammer.cs" />
     <Compile Include="Equipment\Weapons\Blant\Staff.cs" />
     <Compile Include="Equipment\Weapons\Sharp\Axe.cs" />
+    <Compile Include="Equipment\Weapons\Sharp\Sharp.cs" />
     <Compile Include="Equipment\Weapons\Sharp\Sword.cs" />
+    <Compile Include="Equipment\Weapons\Weapon.cs" />
     <Compile Include="PlayersInfo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

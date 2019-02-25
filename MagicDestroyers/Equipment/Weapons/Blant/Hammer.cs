@@ -6,13 +6,18 @@ using System.Threading.Tasks;
 
 namespace MagicDestroyers.Equipment.Weapons.Blant
 {
-    public class Hammer
+    public class Hammer : Blant
     {
-        private int damage;
+        private const int DEFAULT_DAMAGE_POINTS = 10;
 
         public Hammer()
+            : this (DEFAULT_DAMAGE_POINTS)
         {
-
+        }
+            
+        public Hammer(int damagePoints)
+        {
+            base.DamagePoints = damagePoints;
         }
 
         public void Stun()

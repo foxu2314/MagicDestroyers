@@ -6,13 +6,18 @@ using System.Threading.Tasks;
 
 namespace MagicDestroyers.Equipment.Weapons.Sharp
 {
-    public class Axe
+    public class Axe : Sharp
     {
-        private int damage;
+        private const int DEFAULT_DAMAGE_POINTS = 10;
 
         public Axe()
+            : this(DEFAULT_DAMAGE_POINTS)
         {
+        }
 
+        public Axe(int damagePoints)
+        {
+            base.DamagePoints = damagePoints;
         }
 
         public void HackNSlash()
