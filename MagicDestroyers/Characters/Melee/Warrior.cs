@@ -74,8 +74,8 @@ namespace MagicDestroyers.Characters.Melee
             base.HealthPoints = healthPoints;
             base.AbilityPoints = DEFAULT_ABILITYPOINTS;
             base.Faction = DEFAULT_FACTION;
-            this.Weapon = DEFAULT_WEAPON;
-            this.BodyArmor = DEFAULT_BODY_ARMOR;
+            base.Weapon = DEFAULT_WEAPON;
+            base.BodyArmor = DEFAULT_BODY_ARMOR;
         }
         
         public void Strike()

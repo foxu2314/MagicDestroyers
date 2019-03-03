@@ -69,13 +69,13 @@ namespace MagicDestroyers.Characters.Spellcasters
         }
         public Druid(string name, int level, int healthPoints)
         {
-            this.Name = name;
-            this.Level = level;
-            this.HealthPoints = healthPoints;
-            this.Faction = DEFAULT_FACTION;
-            this.ManaPoints = 500;
-            this.Weapon = new Staff();
-            this.BodyArmor = new LightLeatherVest();
+           base.Name = name;
+           base.Level = level;
+           base.HealthPoints = healthPoints;
+           base.Faction = DEFAULT_FACTION;
+           base.ManaPoints = 500;
+           base.Weapon = new Staff();
+           base.BodyArmor = new LightLeatherVest();
         }
 
         public void Moonfire()

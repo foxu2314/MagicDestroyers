@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MagicDestroyers.Equipment.Armors;
+using MagicDestroyers.Equipment.Weapons;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,6 +15,9 @@ namespace MagicDestroyers.Characters
         private string name;
 
         private Faction faction;
+
+        private Armor bodyArmor;
+        private Weapon weapon;
 
         public virtual int HealthPoints
         {
@@ -81,6 +86,29 @@ namespace MagicDestroyers.Characters
                 {
                     throw new ArgumentOutOfRangeException(string.Empty, "Innapropriate length of your name, it has to be between 3 and 12 characters!");
                 }
+            }
+        }
+
+        public Armor BodyArmor
+        {
+            get
+            {
+                return this.bodyArmor;
+            }
+            set
+            {
+                this.bodyArmor = value;
+            }
+        }
+        public Weapon Weapon
+        {
+            get
+            {
+                return this.weapon;
+            }
+            set
+            {
+                this.weapon = value;
             }
         }
 

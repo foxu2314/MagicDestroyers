@@ -69,13 +69,13 @@ namespace MagicDestroyers.Characters.Spellcasters
         }
         public Mage(string name, int level, int healthPoints)
         {
-            this.Name = name;
-            this.Level = level;
-            this.HealthPoints = healthPoints;
-            this.Faction = DEFAULT_FACTION;
-            this.ManaPoints = DEFAULT_MANAPOINTS;
-            this.Weapon = DEFAULT_WEAPON;
-            this.BodyArmor = DEFAULT_BODY_ARMOR;
+            base.Name = name;
+            base.Level = level;
+            base.HealthPoints = healthPoints;
+            base.Faction = DEFAULT_FACTION;
+            base.ManaPoints = DEFAULT_MANAPOINTS;
+            base.Weapon = DEFAULT_WEAPON;
+            base.BodyArmor = DEFAULT_BODY_ARMOR;
         }
 
         public void ArcaneWrath()

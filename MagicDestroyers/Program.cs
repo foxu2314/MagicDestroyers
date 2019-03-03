@@ -19,14 +19,21 @@ namespace MagicDestroyers.Characters
             Character mage = new Mage();
             Character druid = new Druid();
 
-            List<Character> meeleTeam = new List<Character>();
+            List<Character> meleeTeam = new List<Character>();
             List<Character> spellTeam = new List<Character>();
-            meeleTeam.Add(warrior);
-            meeleTeam.Add(knight);
-            meeleTeam.Add(assassin);
+
+            meleeTeam.Add(warrior);
+            meleeTeam.Add(knight);
+            meleeTeam.Add(assassin);
+
             spellTeam.Add(necromancer);
             spellTeam.Add(mage);
             spellTeam.Add(druid);
+
+            //foreach (var character in meleeTeam)
+            //{
+            //    character.Attack(mage);
+            //}
         }
 
     }

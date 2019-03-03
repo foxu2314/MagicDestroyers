@@ -69,13 +69,13 @@ namespace MagicDestroyers.Characters.Melee
         }
         public Assassin(string name, int level, int healthPoints)
         {
-            this.Name = name;
-            this.Level = level;
-            this.HealthPoints = healthPoints;
-            this.Faction = DEFAULT_FACTION;
-            this.AbilityPoints = DEFAULT_ABILITYPOINTS;
-            this.Weapon = DEFAULT_WEAPON;
-            this.BodyArmor = DEFAULT_BODY_ARMOR;
+            base.Name = name;
+            base.Level = level;
+            base.HealthPoints = healthPoints;
+            base.Faction = DEFAULT_FACTION;
+            base.AbilityPoints = DEFAULT_ABILITYPOINTS;
+            base.Weapon = DEFAULT_WEAPON;
+            base.BodyArmor = DEFAULT_BODY_ARMOR;
         }
 
         public void Raze()
