@@ -4,7 +4,7 @@ using System;
 
 namespace MagicDestroyers.Characters.Melee
 {
-    public class Warrior : Melee
+    public class Warrior : Melee,  IAttacking, IDefending
     {
         public const int DEFAULT_ABILITYPOINTS = 10;
         public const int DEFAULT_HEALTHPOINTS = 100;
@@ -93,17 +93,17 @@ namespace MagicDestroyers.Characters.Melee
 
         public override void Attack()
         {
-            throw new NotImplementedException();
+            this.Strike();
         }
 
         public override void Defend()
         {
-            throw new NotImplementedException();
+            this.SkinHarden();
         }
 
         public override void SpecialAttack()
         {
-            throw new NotImplementedException();
+            this.Execute();
         }
     }
 

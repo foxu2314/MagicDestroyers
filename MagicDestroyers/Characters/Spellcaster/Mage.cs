@@ -93,17 +93,17 @@ namespace MagicDestroyers.Characters.Spellcasters
 
         public override void Attack()
         {
-            throw new NotImplementedException();
+            this.ArcaneWrath();
         }
 
         public override void Defend()
         {
-            throw new NotImplementedException();
+            this.Meditation();
         }
 
         public override void SpecialAttack()
         {
-            throw new NotImplementedException();
+            this.Firewall();
         }
     }
 }

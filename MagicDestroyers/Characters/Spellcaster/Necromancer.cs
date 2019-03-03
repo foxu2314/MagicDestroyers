@@ -93,17 +93,17 @@ namespace MagicDestroyers.Characters.Spellcasters
 
         public override void Attack()
         {
-            throw new NotImplementedException();
+            this.ShadowRage();
         }
 
         public override void Defend()
         {
-            throw new NotImplementedException();
+            this.BoneShield();
         }
 
         public override void SpecialAttack()
         {
-            throw new NotImplementedException();
+            this.VampireTouch();
         }
     }
 }
