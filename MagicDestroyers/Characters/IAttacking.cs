@@ -4,9 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MagicDestroyers.Equipment.Weapons.Sharp
+namespace MagicDestroyers.Characters
 {
-    public abstract class Sharp : Weapon
+    public interface IAttacking
     {
+        void Attack();
+
+        void SpecialAttack();
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MagicDestroyers.Equipment.Weapons.Blant
 {
-    public class Blant : Weapon
+    public abstract class Blant : Weapon
     {
 
     }

@@ -44,6 +44,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Characters\Character.cs" />
+    <Compile Include="Characters\IAttacking.cs" />
+    <Compile Include="Characters\IDefending.cs" />
     <Compile Include="Characters\Melee\Assassin.cs" />
     <Compile Include="Characters\Melee\Melee.cs" />
     <Compile Include="Characters\Spellcaster\Druid.cs" />

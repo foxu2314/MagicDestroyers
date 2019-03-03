@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MagicDestroyers.Characters
 {
-    public class Character
+    public abstract class Character : IAttacking, IDefending
     {
         private int healthPoints;
         private int level;
@@ -83,5 +83,11 @@ namespace MagicDestroyers.Characters
                 }
             }
         }
+
+        public abstract void Attack();
+
+        public abstract void Defend();
+
+        public abstract void SpecialAttack();
     }
 }
